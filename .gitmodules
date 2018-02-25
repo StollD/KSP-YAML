@@ -1,0 +1,3 @@
+[submodule "src/SharpYaml"]
+	path = src/SharpYaml
+	url = https://github.com/xoofx/SharpYaml

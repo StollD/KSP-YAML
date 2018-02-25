@@ -1,0 +1,16 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KSP-YAML", "src\KSP-YAML.csproj", "{7729C3E9-4F8A-4820-AA4C-74B189310AC7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7729C3E9-4F8A-4820-AA4C-74B189310AC7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7729C3E9-4F8A-4820-AA4C-74B189310AC7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7729C3E9-4F8A-4820-AA4C-74B189310AC7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7729C3E9-4F8A-4820-AA4C-74B189310AC7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

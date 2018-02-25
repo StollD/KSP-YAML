@@ -1,0 +1,218 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7729C3E9-4F8A-4820-AA4C-74B189310AC7}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>KSP_YAML</RootNamespace>
+    <AssemblyName>KSP-YAML</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\build\GameData</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NET35</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\build\GameData</OutputPath>
+    <DefineConstants>TRACE;NET35</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\packages\Assembly-CSharp.1.3.1\lib\net35\Assembly-CSharp.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UnityEngine, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\packages\UnityEngine.1.3.1\lib\net35\UnityEngine.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\packages\UnityEngine.UI.1.3.1\lib\net35\UnityEngine.UI.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="SharpYaml\SharpYaml\CharacterAnalyzer.cs" />
+    <Compile Include="SharpYaml\SharpYaml\CharHelper.cs" />
+    <Compile Include="SharpYaml\SharpYaml\Constants.cs" />
+    <Compile Include="SharpYaml\SharpYaml\Emitter.cs" />
+    <Compile Include="SharpYaml\SharpYaml\EmitterState.cs" />
+    <Compile Include="SharpYaml\SharpYaml\EventReader.cs" />
+    <Compile Include="SharpYaml\SharpYaml\Events\AnchorAlias.cs" />
+    <Compile Include="SharpYaml\SharpYaml\Events\DocumentEnd.cs" />
+    <Compile Include="SharpYaml\SharpYaml\Events\DocumentStart.cs" />
+    <Compile Include="SharpYaml\SharpYaml\Events\EventType.cs" />
+    <Compile Include="SharpYaml\SharpYaml\Events\MappingEnd.cs" />
+    <Compile Include="SharpYaml\SharpYaml\Events\MappingStart.cs" />
+    <Compile Include="SharpYaml\SharpYaml\Events\NodeEvent.cs" />
+    <Compile Include="SharpYaml\SharpYaml\Events\ParsingEvent.cs" />
+    <Compile Include="SharpYaml\SharpYaml\Events\Scalar.cs" />
+    <Compile Include="SharpYaml\SharpYaml\Events\SequenceEnd.cs" />
+    <Compile Include="SharpYaml\SharpYaml\Events\SequenceStart.cs" />
+    <Compile Include="SharpYaml\SharpYaml\Events\StreamEnd.cs" />
+    <Compile Include="SharpYaml\SharpYaml\Events\StreamStart.cs" />
+    <Compile Include="SharpYaml\SharpYaml\FakeList.cs" />
+    <Compile Include="SharpYaml\SharpYaml\IEmitter.cs" />
+    <Compile Include="SharpYaml\SharpYaml\ILookAheadBuffer.cs" />
+    <Compile Include="SharpYaml\SharpYaml\InsertionQueue.cs" />
+    <Compile Include="SharpYaml\SharpYaml\IParser.cs" />
+    <Compile Include="SharpYaml\SharpYaml\LookAheadBuffer.cs" />
+    <Compile Include="SharpYaml\SharpYaml\Mark.cs" />
+    <Compile Include="SharpYaml\SharpYaml\MemoryParser.cs" />
+    <Compile Include="SharpYaml\SharpYaml\Model\YamlContainer.cs" />
+    <Compile Include="SharpYaml\SharpYaml\Model\YamlDocument.cs" />
+    <Compile Include="SharpYaml\SharpYaml\Model\YamlElement.cs" />
+    <Compile Include="SharpYaml\SharpYaml\Model\YamlMapping.cs" />
+    <Compile Include="SharpYaml\SharpYaml\Model\YamlNode.cs" />
+    <Compile Include="SharpYaml\SharpYaml\Model\YamlSequence.cs" />
+    <Compile Include="SharpYaml\SharpYaml\Model\YamlStream.cs" />
+    <Compile Include="SharpYaml\SharpYaml\Model\YamlValue.cs" />
+    <Compile Include="SharpYaml\SharpYaml\Parser.cs" />
+    <Compile Include="SharpYaml\SharpYaml\ParserState.cs" />
+    <Compile Include="SharpYaml\SharpYaml\ScalarStyle.cs" />
+    <Compile Include="SharpYaml\SharpYaml\Scanner.cs" />
+    <Compile Include="SharpYaml\SharpYaml\Schemas\CoreSchema.cs" />
+    <Compile Include="SharpYaml\SharpYaml\Schemas\ExtendedSchema.cs" />
+    <Compile Include="SharpYaml\SharpYaml\Schemas\FailsafeSchema.cs" />
+    <Compile Include="SharpYaml\SharpYaml\Schemas\IYamlSchema.cs" />
+    <Compile Include="SharpYaml\SharpYaml\Schemas\JsonSchema.cs" />
+    <Compile Include="SharpYaml\SharpYaml\Schemas\SchemaBase.cs" />
+    <Compile Include="SharpYaml\SharpYaml\SemanticErrorException.cs" />
+    <Compile Include="SharpYaml\SharpYaml\Serialization\AnchorEventEmitter.cs" />
+    <Compile Include="SharpYaml\SharpYaml\Serialization\AnchorNotFoundException.cs" />
+    <Compile Include="SharpYaml\SharpYaml\Serialization\AssemblyRegistry.cs" />
+    <Compile Include="SharpYaml\SharpYaml\Serialization\AttributeRegistry.cs" />
+    <Compile Include="SharpYaml\SharpYaml\Serialization\ChainedEventEmitter.cs" />
+    <Compile Include="SharpYaml\SharpYaml\Serialization\ChainedObjectFactory.cs" />
+    <Compile Include="SharpYaml\SharpYaml\Serialization\DefaultNamingConvention.cs" />
+    <Compile Include="SharpYaml\SharpYaml\Serialization\DefaultObjectFactory.cs" />
+    <Compile Include="SharpYaml\SharpYaml\Serialization\DescriptorCategory.cs" />
+    <Compile Include="SharpYaml\SharpYaml\Serialization\Descriptors\ArrayDescriptor.cs" />
+    <Compile Include="SharpYaml\SharpYaml\Serialization\Descriptors\CollectionDescriptor.cs" />
+    <Compile Include="SharpYaml\SharpYaml\Serialization\Descriptors\DefaultKeyComparer.cs" />
+    <Compile Include="SharpYaml\SharpYaml\Serialization\Descriptors\DictionaryDescriptor.cs" />
+    <Compile Include="SharpYaml\SharpYaml\Serialization\Descriptors\FieldDescriptor.cs" />
+    <Compile Include="SharpYaml\SharpYaml\Serialization\Descriptors\MemberDescriptorBase.cs" />
+    <Compile Include="SharpYaml\SharpYaml\Serialization\Descriptors\NullableDescriptor.cs" />
+    <Compile Include="SharpYaml\SharpYaml\Serialization\Descriptors\ObjectDescriptor.cs" />
+    <Compile Include="SharpYaml\SharpYaml\Serialization\Descriptors\PrimitiveDescriptor.cs" />
+    <Compile Include="SharpYaml\SharpYaml\Serialization\Descriptors\PropertyDescriptor.cs" />
+    <Compile Include="SharpYaml\SharpYaml\Serialization\Descriptors\TypeDescriptorFactory.cs" />
+    <Compile Include="SharpYaml\SharpYaml\Serialization\DocumentLoadingState.cs" />
+    <Compile Include="SharpYaml\SharpYaml\Serialization\DuplicateAnchorException.cs" />
+    <Compile Include="SharpYaml\SharpYaml\Serialization\DynamicMemberDescriptorBase.cs" />
+    <Compile Include="SharpYaml\SharpYaml\Serialization\EmitterState.cs" />
+    <Compile Include="SharpYaml\SharpYaml\Serialization\EventInfo.cs" />
+    <Compile Include="SharpYaml\SharpYaml\Serialization\FlatNamingConvention.cs" />
+    <Compile Include="SharpYaml\SharpYaml\Serialization\IAttributeRegistry.cs" />
+    <Compile Include="SharpYaml\SharpYaml\Serialization\IdentityEqualityComparer.cs" />
+    <Compile Include="SharpYaml\SharpYaml\Serialization\IEventEmitter.cs" />
+    <Compile Include="SharpYaml\SharpYaml\Serialization\IMemberDescriptor.cs" />
+    <Compile Include="SharpYaml\SharpYaml\Serialization\IMemberNamingConvention.cs" />
+    <Compile Include="SharpYaml\SharpYaml\Serialization\IObjectFactory.cs" />
+    <Compile Include="SharpYaml\SharpYaml\Serialization\IObjectSerializerBackend.cs" />
+    <Compile Include="SharpYaml\SharpYaml\Serialization\IOrderedDictionary.cs" />
+    <Compile Include="SharpYaml\SharpYaml\Serialization\ITagTypeRegistry.cs" />
+    <Compile Include="SharpYaml\SharpYaml\Serialization\ITagTypeResolver.cs" />
+    <Compile Include="SharpYaml\SharpYaml\Serialization\ITypeDescriptor.cs" />
+    <Compile Include="SharpYaml\SharpYaml\Serialization\ITypeDescriptorFactory.cs" />
+    <Compile Include="SharpYaml\SharpYaml\Serialization\IYamlSerializable.cs" />
+    <Compile Include="SharpYaml\SharpYaml\Serialization\IYamlSerializableFactory.cs" />
+    <Compile Include="SharpYaml\SharpYaml\Serialization\IYamlVisitor.cs" />
+    <Compile Include="SharpYaml\SharpYaml\Serialization\JsonEventEmitter.cs" />
+    <Compile Include="SharpYaml\SharpYaml\Serialization\LambdaObjectFactory.cs" />
+    <Compile Include="SharpYaml\SharpYaml\Serialization\Logging\ILogger.cs" />
+    <Compile Include="SharpYaml\SharpYaml\Serialization\Logging\LogLevel.cs" />
+    <Compile Include="SharpYaml\SharpYaml\Serialization\ObjectContext.cs" />
+    <Compile Include="SharpYaml\SharpYaml\Serialization\OrderedDictionary.cs" />
+    <Compile Include="SharpYaml\SharpYaml\Serialization\Serializer.cs" />
+    <Compile Include="SharpYaml\SharpYaml\Serialization\SerializerContext.cs" />
+    <Compile Include="SharpYaml\SharpYaml\Serialization\SerializerContextSettings.cs" />
+    <Compile Include="SharpYaml\SharpYaml\Serialization\SerializerSettings.cs" />
+    <Compile Include="SharpYaml\SharpYaml\Serialization\Serializers\AnchorSerializer.cs" />
+    <Compile Include="SharpYaml\SharpYaml\Serialization\Serializers\ArraySerializer.cs" />
+    <Compile Include="SharpYaml\SharpYaml\Serialization\Serializers\ChainedSerializer.cs" />
+    <Compile Include="SharpYaml\SharpYaml\Serialization\Serializers\CollectionSerializer.cs" />
+    <Compile Include="SharpYaml\SharpYaml\Serialization\Serializers\DefaultObjectSerializerBackend.cs" />
+    <Compile Include="SharpYaml\SharpYaml\Serialization\Serializers\DictionarySerializer.cs" />
+    <Compile Include="SharpYaml\SharpYaml\Serialization\Serializers\ObjectSerializer.cs" />
+    <Compile Include="SharpYaml\SharpYaml\Serialization\Serializers\PrimitiveSerializer.cs" />
+    <Compile Include="SharpYaml\SharpYaml\Serialization\Serializers\RoutingSerializer.cs" />
+    <Compile Include="SharpYaml\SharpYaml\Serialization\Serializers\ScalarSerializerBase.cs" />
+    <Compile Include="SharpYaml\SharpYaml\Serialization\Serializers\TagTypeSerializer.cs" />
+    <Compile Include="SharpYaml\SharpYaml\Serialization\WriterEventEmitter.cs" />
+    <Compile Include="SharpYaml\SharpYaml\Serialization\YamlAliasNode.cs" />
+    <Compile Include="SharpYaml\SharpYaml\Serialization\YamlDocument.cs" />
+    <Compile Include="SharpYaml\SharpYaml\Serialization\YamlIgnoreAttribute.cs" />
+    <Compile Include="SharpYaml\SharpYaml\Serialization\YamlMappingNode.cs" />
+    <Compile Include="SharpYaml\SharpYaml\Serialization\YamlMemberAttribute.cs" />
+    <Compile Include="SharpYaml\SharpYaml\Serialization\YamlNode.cs" />
+    <Compile Include="SharpYaml\SharpYaml\Serialization\YamlNodeIdentityEqualityComparer.cs" />
+    <Compile Include="SharpYaml\SharpYaml\Serialization\YamlRemapAttribute.cs" />
+    <Compile Include="SharpYaml\SharpYaml\Serialization\YamlScalarNode.cs" />
+    <Compile Include="SharpYaml\SharpYaml\Serialization\YamlSequenceNode.cs" />
+    <Compile Include="SharpYaml\SharpYaml\Serialization\YamlSerializableMethod.cs" />
+    <Compile Include="SharpYaml\SharpYaml\Serialization\YamlStream.cs" />
+    <Compile Include="SharpYaml\SharpYaml\Serialization\YamlStyleAttribute.cs" />
+    <Compile Include="SharpYaml\SharpYaml\Serialization\YamlTagAttribute.cs" />
+    <Compile Include="SharpYaml\SharpYaml\Serialization\YamlVisitor.cs" />
+    <Compile Include="SharpYaml\SharpYaml\SimpleKey.cs" />
+    <Compile Include="SharpYaml\SharpYaml\SortedDictionary.cs" />
+    <Compile Include="SharpYaml\SharpYaml\StringExtensions.cs" />
+    <Compile Include="SharpYaml\SharpYaml\StringLookAheadBuffer.cs" />
+    <Compile Include="SharpYaml\SharpYaml\SyntaxErrorException.cs" />
+    <Compile Include="SharpYaml\SharpYaml\TagDirectiveCollection.cs" />
+    <Compile Include="SharpYaml\SharpYaml\Tokens\Anchor.cs" />
+    <Compile Include="SharpYaml\SharpYaml\Tokens\AnchorAlias.cs" />
+    <Compile Include="SharpYaml\SharpYaml\Tokens\BlockEnd.cs" />
+    <Compile Include="SharpYaml\SharpYaml\Tokens\BlockEntry.cs" />
+    <Compile Include="SharpYaml\SharpYaml\Tokens\BlockMappingStart.cs" />
+    <Compile Include="SharpYaml\SharpYaml\Tokens\BlockSequenceStart.cs" />
+    <Compile Include="SharpYaml\SharpYaml\Tokens\DocumentEnd.cs" />
+    <Compile Include="SharpYaml\SharpYaml\Tokens\DocumentStart.cs" />
+    <Compile Include="SharpYaml\SharpYaml\Tokens\FlowEntry.cs" />
+    <Compile Include="SharpYaml\SharpYaml\Tokens\FlowMappingEnd.cs" />
+    <Compile Include="SharpYaml\SharpYaml\Tokens\FlowMappingStart.cs" />
+    <Compile Include="SharpYaml\SharpYaml\Tokens\FlowSequenceEnd.cs" />
+    <Compile Include="SharpYaml\SharpYaml\Tokens\FlowSequenceStart.cs" />
+    <Compile Include="SharpYaml\SharpYaml\Tokens\Key.cs" />
+    <Compile Include="SharpYaml\SharpYaml\Tokens\Scalar.cs" />
+    <Compile Include="SharpYaml\SharpYaml\Tokens\StreamEnd.cs" />
+    <Compile Include="SharpYaml\SharpYaml\Tokens\StreamStart.cs" />
+    <Compile Include="SharpYaml\SharpYaml\Tokens\Tag.cs" />
+    <Compile Include="SharpYaml\SharpYaml\Tokens\TagDirective.cs" />
+    <Compile Include="SharpYaml\SharpYaml\Tokens\Token.cs" />
+    <Compile Include="SharpYaml\SharpYaml\Tokens\Value.cs" />
+    <Compile Include="SharpYaml\SharpYaml\Tokens\VersionDirective.cs" />
+    <Compile Include="SharpYaml\SharpYaml\TypeExtensions.cs" />
+    <Compile Include="SharpYaml\SharpYaml\Version.cs" />
+    <Compile Include="SharpYaml\SharpYaml\YamlException.cs" />
+    <Compile Include="SharpYaml\SharpYaml\YamlStyle.cs" />
+    <Compile Include="YAMLLoader.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
