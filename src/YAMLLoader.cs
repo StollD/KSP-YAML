@@ -32,8 +32,6 @@ namespace KSP_YAML
         /// </summary>
         void OnGameDatabaseLoaded()
         {
-            Debug.Log("HI");
-            Debug.Log(GameDatabase.Instance.root);
             CrawlGameDatabase(GameDatabase.Instance.root);
             
         }
@@ -49,7 +47,6 @@ namespace KSP_YAML
                 UrlDir.UrlFile file = directory.files[i];
                 
                 // Did we found a YAML file?
-                Debug.Log(file.fileExtension);
                 if (file.fileExtension == "yaml" || file.fileExtension == "yml" || file.fileExtension == "json")
                 {
                     file.ConfigureFile(new[] {yamlConfigFileType});
