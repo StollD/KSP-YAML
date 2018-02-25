@@ -50,7 +50,7 @@ namespace KSP_YAML
                 
                 // Did we found a YAML file?
                 Debug.Log(file.fileExtension);
-                if (file.fileExtension == "yaml" || file.fileExtension == "yml")
+                if (file.fileExtension == "yaml" || file.fileExtension == "yml" || file.fileExtension == "json")
                 {
                     file.ConfigureFile(new[] {yamlConfigFileType});
                     
